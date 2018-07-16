@@ -5,9 +5,13 @@ exports.up = function(knex, Promise) {
    table.string("buyer_username");
    table.string("buyer_pw");
    table.integer("buyer_reg_id")
+   .notNullable()
+   .references('id')
+   .inTable('registries')
+   .onDelete('CASCADE')
    table.string("buyer_first_name");
    table.string("buyer_last_name");
-   table.text('reg_profile_pic');
+   table.text('buyer_profile_pic');
 
    table.timestamps(true, true);
   })

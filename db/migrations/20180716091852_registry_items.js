@@ -15,7 +15,7 @@ exports.up = function(knex, Promise) {
    .onDelete('CASCADE')
    .index();
    table.string('status').defaultTo('unfulfilled');
-   table.string('purchased_buyer_id')
+   table.integer('purchased_buyer_id')
    .references('id')
    .inTable('registry_buyers')
    .onDelete('CASCADE')

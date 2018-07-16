@@ -9,6 +9,7 @@ const knex = require('./db/knex');
 const index = require('./routes/indexRoutes');
 const registries = require('./routes/registriesRoutes');
 const products = require('./routes/productsRoutes')
+const notifications = require('./routes/notificationsRoutes')
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', index);
 app.use('/registries', registries);
 app.use('/products', products);
+app.use('/notifications', notifications)
 
 app.listen(port, function() {
   console.log("listening on port: ", port);

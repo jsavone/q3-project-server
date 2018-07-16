@@ -2,8 +2,16 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable("notifications",(table)=>{
    table.increments();
-   table.integer("notif_reg_id");
-   table.integer("notif_buyer_id");
+   table.integer("notif_reg_id")
+   .notNullable()
+   .references('id')
+   .inTable('registries')
+   .onDelete('CASCADE')
+   table.integer("notif_buyer_id")
+   .notNullable()
+   .references('id')
+   .inTable('registry_buyers')
+   .onDelete('CASCADE')
    table.text('notif_message');
    table.boolean("notif_completed").defaultTo(false);
 
