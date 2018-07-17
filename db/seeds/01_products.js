@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
         prod_name: 'Keurig Elite-K Coffemaker',
         prod_desc: `The Keurig K-Elite Coffee maker blends premium finish and programmable features together to deliver both modern design and the ultimate in beverage customization. With a striking brushed finish and metal details, it's a stylish addition to any kitchen. The Keurig K-Elite Coffee maker features a strong brew setting when you want to brew a bolder cup of Coffee, and an Iced setting to brew hot over ice for a refreshing, full-flavored Iced Coffee. It features five brew sizes, so you can brew 4, 6, 8, 10, or 12oz of your favorite Coffee, tea, hot cocoa, or Iced beverage in under a minute at the touch of a button. Choose from hundreds of delicious varieties of K-Cup pods, or brew your own ground Coffee using the universal My K-Cup reusable Coffee filter (sold separately). in addition to a host of programmable features like temperature control, the Keurig K-Elite Coffee maker provides hot water on demand for instant soups and oatmeal, and the large 75oz removable water filter let you brew 8 Cups between refills.` ,
         img_url: "https://images-na.ssl-images-amazon.com/images/I/81I2sEU-C9L._SL1500_.jpg",
-        msrp: 169.99,
+        msrp: 249.99,
         upc: '5000197490',
         amazon_sale_price: 155.33,
         amazon_prod_url: 'https://www.amazon.com/Keurig-K-Elite-Temperature-Capability-Programmable/dp/B0788F3R8X/ref=sr_1_3?s=kitchen&ie=UTF8&qid=1531516341&sr=1-3&keywords=keurig+elite',
