@@ -21,8 +21,14 @@ router.post('/', (req, res) => {
 });
 
 router.get('/guests', (req, res) => {
-  knex('registry_guests').then(registries => {
-    res.json(registries);
+  knex('registry_guests').then(items => {
+    res.json(items);
+  })
+});
+
+router.get('/items', (req, res) => {
+  knex('registry_items').then(items => {
+    res.json(items);
   })
 });
 
