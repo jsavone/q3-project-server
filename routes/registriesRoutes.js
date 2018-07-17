@@ -13,11 +13,22 @@ router.post('/', (req, res) => {
   knex('registries').insert({
     reg_username: req.body.user_name,
     reg_pw: req.body.pw,
-    req_type: req.body.reg_type,
-    reg_fist_name: req.body.first_name,
+    reg_type: req.body.reg_type,
+    reg_first_name: req.body.first_name,
     reg_last_name: req.body.last_name,
-    req_description: req.body.description
+    reg_description: req.body.description
   }).then(() => knex('registries').then(registries => res.json(registries)))
+});
+
+router.get('/guests', (req, res) => {
+  knex('registry_guests').then(registries => {
+    res.json(registries);
+  })
+});
+
+router.post('/guests', (req, res) => {
+  console.log(req.body)
+  knex('registry_guests').insert(req.body).then(() => knex('registries').then(registries => res.json(registries)))
 });
 
 router.get('/:id', (req, res) => {

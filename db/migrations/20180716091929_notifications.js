@@ -7,10 +7,10 @@ exports.up = function(knex, Promise) {
    .references('id')
    .inTable('registries')
    .onDelete('CASCADE')
-   table.integer("notif_buyer_id")
+   table.integer("notif_guest_id")
    .notNullable()
    .references('id')
-   .inTable('registry_buyers')
+   .inTable('registry_guests')
    .onDelete('CASCADE')
    table.text('notif_message');
    table.boolean("notif_completed").defaultTo(false);

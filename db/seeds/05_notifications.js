@@ -5,9 +5,9 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('notifications').insert([
-        {notif_reg_id: 1, notif_buyer_id: 1, notif_message: "Message number 1"},
-        {notif_reg_id: 1, notif_buyer_id: 1, notif_message: "Message number 2"},
-        {notif_reg_id: 1, notif_buyer_id: 1, notif_message: "Message number 3"}
+        {notif_reg_id: 1, notif_guest_id: 1, notif_message: "Message number 1"},
+        {notif_reg_id: 1, notif_guest_id: 1, notif_message: "Message number 2"},
+        {notif_reg_id: 1, notif_guest_id: 1, notif_message: "Message number 3"}
       ]);
     });
 };
