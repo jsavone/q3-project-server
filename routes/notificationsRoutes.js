@@ -15,4 +15,12 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
+router.delete('/:id', (req, res) => {
+  knex('notifications').where('id', req.params.id).del().then(() => knex('notifications').then(items => res.json(items)))
+});
+
+router.post('/', (req, res) => {
+  knex('notifications').insert(req.body).then(() => knex('notifications').then(notifs => res.json(notifs)))
+});
+
 module.exports = router;
