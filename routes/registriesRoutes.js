@@ -33,7 +33,7 @@ router.get('/items', (req, res) => {
 });
 
 router.patch('/items/claim/:item_id/:guest_id', (req, res) => {
-  knex('registry_items').where('id', req.params.item_id).update({
+  knex('registry_items').where('prod_id', req.params.item_id).update({
     status: 'fulfilled',
     purchased_guest_id: req.params.guest_id
   }).then(() => knex('registry_items').then(items => res.json(items)))
@@ -43,8 +43,11 @@ router.delete('/items/remove/:id', (req, res) => {
   knex('registry_items').where('id', req.params.id).del().then(() => knex('registry_items').then(items => res.json(items)))
 });
 
+router.post('/items/add', (req, res) => {
+  knex('registry_items').insert(req.body).then(() => knex('registry_items').then(registries => res.json(registries)))
+});
+
 router.post('/guests', (req, res) => {
-  console.log(req.body)
   knex('registry_guests').insert(req.body).then(() => knex('registries').then(registries => res.json(registries)))
 });
 
