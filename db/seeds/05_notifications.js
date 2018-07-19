@@ -5,9 +5,9 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('notifications').insert([
-        {notif_reg_id: 1, notif_guest_id: 1, notif_message: "Message number 1"},
-        {notif_reg_id: 1, notif_guest_id: 1, notif_message: "Message number 2"},
-        {notif_reg_id: 1, notif_guest_id: 1, notif_message: "Message number 3"}
+        {notif_reg_id: 1, notif_guest_id: 1, notif_message: "Congratulations! I'm bringing the RV this Christmas! - Cousin Eddie"},
+        {notif_reg_id: 1, notif_guest_id: 1, notif_message: "Can't wait to see you at your wedding! - Aunt Barb"},
+        {notif_reg_id: 1, notif_guest_id: 1, notif_message: "Thanks for saving me money with this website! - Uncle George"}
       ]);
     });
 };

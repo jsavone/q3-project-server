@@ -19,6 +19,16 @@ exports.seed = function(knex, Promise) {
           prod_id: 3,
           reg_id: 1,
         },
+        {
+          prod_id: 10,
+          reg_id: 1,
+          status: 'fulfilled'
+        },
+        {
+          prod_id: 8,
+          reg_id: 1,
+          status: 'fulfilled'
+        },
       ]);
     });
 };

@@ -11,6 +11,8 @@ exports.seed = function(knex, Promise) {
           guest_reg_id: 1,
           guest_first_name: 'Martha',
           guest_last_name: 'Swanson',
+          guest_profile_pic: "https://m.media-amazon.com/images/M/MV5BMjA2OTA5NTUyMF5BMl5BanBnXkFtZTcwNjMwNzYzMw@@._V1_.jpg"
+
 
         },
       ]);
